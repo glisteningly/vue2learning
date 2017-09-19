@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>{{ title }}</h1>
-    <ul>
+    <ul class="todos">
       <li v-for="(todo,index) in todos"
           :id="index">
         <label>{{index + 1}}.{{ todo.value }}</label>
@@ -11,6 +11,8 @@
 </template>
 
 <script>
+  import './assets/todos.less'
+  import './assets/site.less'
   export default {
     name: 'app',
     data() {
